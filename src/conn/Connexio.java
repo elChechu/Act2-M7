@@ -9,6 +9,7 @@ package conn;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 /**
  *
@@ -21,7 +22,7 @@ public class Connexio {
  
 		try {
                         Class.forName("com.mysql.jdbc.Driver");
-			String url = "jdbc:mysql://79.137.83.198:3306/ferreria?user=ferreria&password=Ferreria29!";
+			String url = "jdbc:mysql://79.137.83.198:3306/sakila?user=ferreria&password=Ferreria29!";
 			con = DriverManager.getConnection(url);
 			if (con != null) {
 				System.out.println("Conexió ok");
@@ -32,4 +33,8 @@ public class Connexio {
 		}
 		return con;
 	}
+
+    public Statement createStatement() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml/1" fx:controller="informes.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="informes.FXMLDocumentController">
     <children>
-        <Button layoutX="126" layoutY="90" text="Click Me!" onAction="#handleButtonAction" fx:id="button" />
-        <Label layoutX="126" layoutY="120" minHeight="16" minWidth="69" fx:id="label" />
+        <Button fx:id="pdfbtn" layoutX="108.0" layoutY="88.0" onAction="#toPDF" text="PDF" />
+      <Button fx:id="docbtn" layoutX="165.0" layoutY="88.0" mnemonicParsing="false" onAction="#toDOC" text="DOCX" />
+      <Button fx:id="informebtn" layoutX="109.0" layoutY="32.0" mnemonicParsing="false" onAction="#informeMostrar" text="Mostrar Informe" />
+      <Text layoutX="108.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Guardar en formato" />
     </children>
 </AnchorPane>
